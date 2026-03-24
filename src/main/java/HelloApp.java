@@ -1,17 +1,15 @@
 public class HelloApp {
+
     public static void main(String[] args) {
 
-        // Check if command-line arguments are provided
-        if (args.length > 0) {
-            System.out.print("Hello ");
-            
-            // Print all arguments
-            for (int i = 0; i < args.length; i++) {
-                System.out.print(args[i] + " ");
-            }
+        // If no command-line arguments, print default message
+        if (args.length == 0) {
+            System.out.println("Hello");
         } else {
-            // Default message if no arguments
-            System.out.println("Hello World");
+            // Use enhanced for loop to print Hello with each argument
+            for (String arg : args) {
+                System.out.println("Hello " + arg);
+            }
         }
     }
 }
